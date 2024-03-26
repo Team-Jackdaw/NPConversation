@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "npconversation",
+  "version": "${version}",
+  "name": "NPConversation",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/Team-Jackdaw/NPConversation"
+  },
+  "license": "LGPL-3.0",
+  "icon": "assets/npconversation/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "com.jackdaw.npconversation.NPConversation"
+    ]
+  },
+  "mixins": [
+    "npconversation.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
