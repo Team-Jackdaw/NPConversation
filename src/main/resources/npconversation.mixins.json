@@ -4,6 +4,7 @@
   "package": "com.jackdaw.npconversation.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "NPCReplyMessageMixin"
   ],
   "injectors": {
     "defaultRequire": 1
