@@ -16,6 +16,7 @@ public class NPCChat extends ConversationHandler {
     public NPCChat(@NotNull NPCEntity npc, NPCEntity npcNext, NPCChat chat, String topic) {
         super(npc);
         npc.addFunction("end_chat");
+        npc.addFunction("query_npc");
         this.topic = topic;
         this.nextChat = chat == null ? new NPCChat(npcNext, null, this, topic) : chat;
         this.updateTime = System.currentTimeMillis();

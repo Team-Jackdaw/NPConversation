@@ -10,6 +10,7 @@ import com.jackdaw.chatwithnpc.openaiapi.function.FunctionManager;
 import com.jackdaw.npconversation.conversation.ChatManager;
 import com.jackdaw.npconversation.conversation.NPCChat;
 import com.jackdaw.npconversation.function.EndChatFunction;
+import com.jackdaw.npconversation.function.QueryNPCFunction;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.minecraft.util.ActionResult;
@@ -23,6 +24,7 @@ public class NPConversation implements ModInitializer {
     @Override
     public void onInitialize() {
         FunctionManager.registerFunction("end_chat", new EndChatFunction());
+        FunctionManager.registerFunction("query_npc", new QueryNPCFunction());
         // initialize a new NPC Chat
         UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
             if (entity.getCustomName() == null) return ActionResult.PASS;
