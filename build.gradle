@@ -11,7 +11,10 @@ base {
 }
 
 repositories {
-    mavenLocal()
+    maven {
+        name = "Team-Jackdaw"
+        url = uri("https://maven.ussjackdaw.com/repository/maven-releases/")
+    }
     // Add repositories to retrieve artifacts from in here.
     // You should only use this when depending on other mods because
     // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
@@ -82,6 +85,7 @@ publishing {
 
     // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
     repositories {
+        mavenLocal()
         // Add repositories to publish to here.
         // Notice: This block does NOT have the same function as the block in the top level.
         // The repositories here will be used for publishing your artifact, not for
