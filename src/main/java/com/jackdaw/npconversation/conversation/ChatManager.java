@@ -28,7 +28,7 @@ public class ChatManager {
         NPCChat chat1 = new NPCChat(npc1, npc2, null, topic);
         ConversationManager.conversationMap.put(npc1.getUUID(), chat1);
         ConversationManager.conversationMap.put(npc2.getUUID(), chat1.nextChat);
-        NPConversation.LOGGER.info("[NPConversation] Started a conversation between " + ConversationManager.getConversation(npc1.getUUID()).getNpc().getName() + " and " + ConversationManager.getConversation(npc2.getUUID()).getNpc().getName());
+        NPConversation.LOGGER.debug("[NPConversation] Started a conversation between " + ConversationManager.getConversation(npc1.getUUID()).getNpc().getName() + " and " + ConversationManager.getConversation(npc2.getUUID()).getNpc().getName());
         chat1.startChat();
     }
 
