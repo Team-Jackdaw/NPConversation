@@ -30,7 +30,7 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modImplementation "com.jackdaw:chat-with-NPC:${project.chat_with_npc_version}"
+    modImplementation "com.jackdaw:chat-with-npc:${project.chat_with_npc_version}"
 }
 
 processResources {
